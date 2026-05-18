@@ -9,8 +9,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-brand">
           <Link to="/" className="brand">
-            <Droplet size={28} className="brand-icon" />
-            <span className="brand-text">AquaPura</span>
+            <img src="/assets/logo.png" alt="G+ Series Logo" style={{ height: '40px', width: 'auto' }} />
           </Link>
           <p className="footer-desc">
             Bringing pure, refreshing, and mineral-rich water to your home. Experience the future of hydration.
@@ -37,12 +36,12 @@ const Footer = () => {
           <h4>Contact Us</h4>
           <p>123 Pure Water Lane</p>
           <p>Silicon Valley, CA 94025</p>
-          <p>Email: hello@aquapura.com</p>
+          <p>Email: hello@gplusseries.com</p>
           <p>Phone: +1 (555) 123-4567</p>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} AquaPura. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} G+ Series. All rights reserved.</p>
       </div>
     </footer>
   );

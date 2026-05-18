@@ -41,8 +41,7 @@ const Navbar = () => {
     >
       <div className="nav-container">
         <Link to="/" className="brand">
-          <Droplet size={28} className="brand-icon" />
-          <span className="brand-text">AquaPura</span>
+          <img src="/assets/logo.png" alt="G+ Series Logo" className="brand-logo" />
         </Link>
 
         <div className="desktop-menu">

@@ -29,15 +29,14 @@
   text-decoration: none;
 }
 
-.brand-icon {
-  color: var(--color-blue-main);
+.brand-logo {
+  height: 40px;
+  width: auto;
+  transition: transform var(--transition-fast);
 }
 
-.brand-text {
-  font-family: var(--font-secondary);
-  font-weight: 700;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
+.brand-logo:hover {
+  transform: scale(1.05);
 }
 
 .desktop-menu {

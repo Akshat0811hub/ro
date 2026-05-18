@@ -8,13 +8,21 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="hero-badge"
+          >
+            <span>Next Generation Purification</span>
+          </motion.div>
           <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="hero-title"
           >
-            Pure Water, <br /> Pure <span className="text-highlight">Life</span>.
+            Water as <br /> <span className="text-highlight">Nature</span> Intended.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -22,7 +30,7 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="hero-subtitle"
           >
-            Experience the next generation of water purification. Crystal clear, mineral-rich, and perfectly balanced for your health.
+            Transform your tap water into crystal-clear, mineral-rich hydration. Experience the pinnacle of RO technology designed for modern homes.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -30,20 +38,47 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="hero-actions"
           >
-            <button className="btn btn-primary magnetic">Explore Products</button>
-            <button className="btn btn-secondary magnetic">Watch Video</button>
+            <button className="btn btn-primary magnetic" style={{ padding: '1.2rem 2.5rem', fontSize: '1.1rem' }}>Explore Products</button>
+            <button className="btn btn-secondary magnetic" style={{ padding: '1.2rem 2.5rem', fontSize: '1.1rem' }}>Our Technology</button>
           </motion.div>
         </div>
         
         <div className="hero-image-container">
-          {/* Placeholder for floating purifier image */}
           <motion.div 
             className="hero-image-placeholder glass"
-            animate={{ y: [0, -20, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            style={{ padding: 0, overflow: 'hidden', height: '600px', width: '400px', borderRadius: '30px', position: 'relative' }}
+            animate={{ y: [0, -25, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           >
-            <span className="placeholder-text">Floating Purifier Image</span>
+            <img src="https://images.unsplash.com/photo-1548839140-29a749e1bc4e?q=80&w=800&auto=format&fit=crop" alt="Pure Water Splash" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <div className="hero-image-overlay"></div>
           </motion.div>
+
+          {/* Floating UI Elements */}
+          <motion.div 
+            className="floating-card float-left glass"
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          >
+            <span className="float-icon">💧</span>
+            <div className="float-text">
+              <strong>100% Pure</strong>
+              <span>RO + UV + UF</span>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            className="floating-card float-right glass"
+            animate={{ y: [0, 15, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          >
+            <span className="float-icon">⭐</span>
+            <div className="float-text">
+              <strong>4.9/5 Ratings</strong>
+              <span>50k+ Happy Families</span>
+            </div>
+          </motion.div>
+
           {/* Blob background */}
           <div className="blob blob-1"></div>
           <div className="blob blob-2"></div>
@@ -59,7 +94,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="section-header"
         >
-          <h2>Why Choose AquaPura?</h2>
+          <h2>Why Choose G+ Series?</h2>
           <p>Uncompromising quality for your family's health.</p>
         </motion.div>
         
@@ -100,23 +135,27 @@ const Home = () => {
         </motion.div>
 
         <div className="products-grid">
-          {[1, 2, 3].map((item) => (
+          {[
+            { name: "G+ Series Black", price: "$499", img: "/assets/black.jpg.jpeg" },
+            { name: "G+ Series Blue", price: "$449", img: "/assets/blue.jpg.jpeg" },
+            { name: "G+ Series Desert Brown", price: "$479", img: "/assets/desert brown.jpg.jpeg" },
+            { name: "G+ Series Sea Green", price: "$459", img: "/assets/sea green.jpg.jpeg" }
+          ].map((product, idx) => (
             <motion.div 
-              key={item}
+              key={idx}
               className="product-card glass"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: item * 0.1 }}
+              transition={{ duration: 0.6, delay: idx * 0.1 }}
               whileHover={{ y: -10 }}
             >
-              <div className="product-image-container">
-                 {/* Placeholder for product image */}
-                 <div className="product-image-placeholder">Product {item}</div>
+              <div className="product-image-container" style={{ backgroundColor: '#ffffff', padding: '1rem' }}>
+                 <img src={product.img} alt={product.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
               </div>
               <div className="product-info">
-                <h3>AquaPro Series {item}</h3>
-                <p className="price">$399</p>
+                <h3>{product.name}</h3>
+                <p className="price">{product.price}</p>
                 <button className="btn btn-primary magnetic" style={{ width: '100%', marginTop: '1rem', padding: '0.8rem' }}>View Details</button>
               </div>
             </motion.div>
@@ -133,7 +172,7 @@ const Home = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <h2>The AquaPura Process</h2>
+          <h2>The G+ Series Process</h2>
           <p>How we turn tap water into the purest form of hydration.</p>
         </motion.div>
         
