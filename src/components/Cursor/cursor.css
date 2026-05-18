@@ -1,0 +1,32 @@
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-blue-main);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  mix-blend-mode: difference;
+}
+
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: background-color 0.2s, border 0.2s;
+  /* Magnetic glow effect */
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+}
+
+@media (max-width: 768px) {
+  .cursor-dot, .cursor-glow {
+    display: none;
+  }
+}

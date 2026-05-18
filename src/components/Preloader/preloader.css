@@ -1,0 +1,88 @@
+.preloader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-white);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.dark-mode .preloader-container {
+  background-color: var(--color-black);
+}
+
+.brand-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.preloader-icon {
+  color: var(--color-blue-main);
+}
+
+.preloader-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--color-text-main);
+}
+
+/* Water wave animation */
+.water-wave {
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background: var(--color-blue-light);
+  opacity: 0.3;
+  animation: wave 4s infinite linear;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  z-index: 1;
+}
+
+.water-wave::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+  width: 150%;
+  height: 100%;
+  background: var(--color-blue-main);
+  opacity: 0.2;
+  animation: wave-alt 6s infinite linear;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-10%) scaleY(1.2);
+  }
+  100% {
+    transform: translateX(0) scaleY(1);
+  }
+}
+
+@keyframes wave-alt {
+  0% {
+    transform: translateX(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(10%) scaleY(1.3);
+  }
+  100% {
+    transform: translateX(0) scaleY(1);
+  }
+}
