@@ -19,7 +19,6 @@ import {
 } from 'lucide-react';
 import Hero from '../../components/Hero/Hero';
 import FloatingDroplets from '../../components/FloatingDroplets/FloatingDroplets';
-import SpillingGlass from '../../components/SpillingGlass/SpillingGlass';
 import './home.css';
 
 export default function Home() {
@@ -408,9 +407,7 @@ export default function Home() {
             </div>
 
             {/* Spill Glass Hydro Physics Interactive Widget next to it! */}
-            <div className="product-showcase__widget-side">
-              <SpillingGlass />
-            </div>
+            
 
           </div>
 
