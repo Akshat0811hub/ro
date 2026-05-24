@@ -1,64 +1,65 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import './cursor.css';
 
-const Cursor = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
+export default function Cursor() {
+  const cursorRef = useRef(null);
+  const ringRef = useRef(null);
+  const posRef = useRef({ x: 0, y: 0 });
+  const ringPosRef = useRef({ x: 0, y: 0 });
+  const rafRef = useRef(null);
 
   useEffect(() => {
-    const updateMousePosition = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+    if (window.innerWidth <= 768) return;
+
+    const cursor = cursorRef.current;
+    const ring = ringRef.current;
+    if (!cursor || !ring) return;
+
+    const lerp = (a, b, t) => a + (b - a) * t;
+
+    const onMove = (e) => {
+      posRef.current = { x: e.clientX, y: e.clientY };
+      cursor.style.transform = `translate(${e.clientX - 6}px, ${e.clientY - 6}px)`;
     };
 
-    const handleMouseOver = (e) => {
-      // Add hover effect if hovering over links or buttons
-      if (
-        e.target.tagName.toLowerCase() === 'a' ||
-        e.target.tagName.toLowerCase() === 'button' ||
-        e.target.closest('a') ||
-        e.target.closest('button') ||
-        e.target.classList.contains('magnetic')
-      ) {
-        setIsHovering(true);
-      } else {
-        setIsHovering(false);
-      }
+    const animate = () => {
+      ringPosRef.current.x = lerp(ringPosRef.current.x, posRef.current.x, 0.12);
+      ringPosRef.current.y = lerp(ringPosRef.current.y, posRef.current.y, 0.12);
+      ring.style.transform = `translate(${ringPosRef.current.x - 20}px, ${ringPosRef.current.y - 20}px)`;
+      rafRef.current = requestAnimationFrame(animate);
     };
 
-    window.addEventListener('mousemove', updateMousePosition);
-    window.addEventListener('mouseover', handleMouseOver);
+    const onEnterInteractive = () => {
+      cursor.classList.add('cursor--hover');
+      ring.classList.add('ring--hover');
+    };
+    const onLeaveInteractive = () => {
+      cursor.classList.remove('cursor--hover');
+      ring.classList.remove('ring--hover');
+    };
+
+    window.addEventListener('mousemove', onMove, { passive: true });
+    rafRef.current = requestAnimationFrame(animate);
+
+    const interactives = document.querySelectorAll('a, button, [data-cursor-hover]');
+    interactives.forEach(el => {
+      el.addEventListener('mouseenter', onEnterInteractive);
+      el.addEventListener('mouseleave', onLeaveInteractive);
+    });
 
     return () => {
-      window.removeEventListener('mousemove', updateMousePosition);
-      window.removeEventListener('mouseover', handleMouseOver);
+      window.removeEventListener('mousemove', onMove);
+      cancelAnimationFrame(rafRef.current);
     };
   }, []);
 
+  if (typeof window !== 'undefined' && window.innerWidth <= 768) return null;
+
   return (
     <>
-      <motion.div
-        className="cursor-dot"
-        animate={{
-          x: mousePosition.x - 4,
-          y: mousePosition.y - 4,
-          scale: isHovering ? 0 : 1,
-        }}
-        transition={{ type: "tween", ease: "backOut", duration: 0.1 }}
-      />
-      <motion.div
-        className="cursor-glow"
-        animate={{
-          x: mousePosition.x - 20,
-          y: mousePosition.y - 20,
-          scale: isHovering ? 2 : 1,
-          backgroundColor: isHovering ? 'rgba(14, 165, 233, 0.1)' : 'transparent',
-          border: isHovering ? '1px solid rgba(14, 165, 233, 0.3)' : '1px solid var(--color-blue-main)',
-        }}
-        transition={{ type: "tween", ease: "circOut", duration: 0.2 }}
-      />
+      <div ref={cursorRef} className="cursor-dot" aria-hidden="true" />
+      <div ref={ringRef} className="cursor-ring" aria-hidden="true" />
     </>
   );
-};
-
-export default Cursor;
+}

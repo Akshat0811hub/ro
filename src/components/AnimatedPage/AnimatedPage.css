@@ -1,0 +1,49 @@
+.animated-page-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Sliding doors for About Page transition */
+.about-split-door {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 50.5%; /* slight overlap in center to ensure zero gaps */
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  z-index: 9999; /* high index to cover the whole screen during transition */
+  pointer-events: none;
+}
+
+.door-left {
+  left: 0;
+  border-right: 1.5px solid rgba(14, 165, 233, 0.3);
+  box-shadow: 10px 0 30px rgba(14, 165, 233, 0.05);
+}
+
+.door-right {
+  right: 0;
+  border-left: 1.5px solid rgba(14, 165, 233, 0.3);
+  box-shadow: -10px 0 30px rgba(14, 165, 233, 0.05);
+}
+
+.door-glow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background: radial-gradient(ellipse at center, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
+}
+
+.door-left .door-glow {
+  right: 0;
+  transform: translateX(50%);
+}
+
+.door-right .door-glow {
+  left: 0;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,471 @@
+.contact-page {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+}
+
+/* Contact Hero */
+.contact-hero {
+  position: relative;
+  padding: 10rem 0 5rem 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contact-hero__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.contact-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.contact-orb--1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.06) 0%, transparent 70%);
+  top: -100px;
+  left: -50px;
+}
+
+.contact-orb--2 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.05) 0%, transparent 70%);
+  bottom: 0;
+  right: -50px;
+}
+
+.contact-hero__content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+
+.contact-hero__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 850;
+  line-height: 1.1;
+  color: #0f172a;
+  margin: 1rem 0 1.2rem 0;
+  letter-spacing: -0.03em;
+}
+
+.contact-hero__subtitle {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+/* Details Section */
+.contact-details {
+  background-color: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-divider);
+}
+
+.contact-details__grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 5rem;
+  align-items: flex-start;
+}
+
+/* Channels */
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.channels-title-row h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.channels-title-row p {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+.channels-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.channel-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.8rem 2rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--color-glass-border);
+  box-shadow: var(--shadow-glass);
+  transition: all 0.3s var(--ease-out-expo);
+}
+
+.channel-card:hover {
+  border-color: rgba(14, 165, 233, 0.3);
+  box-shadow: 0 12px 25px rgba(14, 165, 233, 0.05);
+}
+
+.channel-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.15);
+  color: var(--color-aqua);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.channel-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.channel-info h4 {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+
+.channel-info strong {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 750;
+  color: #0f172a;
+}
+
+.channel-info span {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.channels-guarantee {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.8rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--color-glass-border);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+/* Form Wrapper */
+.contact-form-wrapper {
+  padding: 4rem 3.5rem;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--color-glass-border-bright);
+  box-shadow: var(--shadow-glass);
+}
+
+.form-heading {
+  margin-bottom: 2.2rem;
+}
+
+.form-heading h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+}
+
+.form-heading p {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+}
+
+.form-group-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.4rem;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.4rem;
+}
+
+.contact-form label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 1.1rem 1.4rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-divider);
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+  outline: none;
+  transition: all var(--transition-fast);
+  cursor: none;
+  font-family: var(--font-primary);
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+  border-color: var(--color-aqua);
+  background: #ffffff;
+  box-shadow: 0 0 12px rgba(14, 165, 233, 0.15);
+}
+
+.contact-submit-btn {
+  width: 100%;
+  padding: 1.1rem 2rem;
+  justify-content: center;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Success Card */
+.contact-success {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.success-checkmark {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 auto 2rem auto;
+}
+
+.contact-success h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.6rem;
+  color: #0f172a;
+  margin-bottom: 0.8rem;
+}
+
+.contact-success p {
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  font-size: 1.02rem;
+}
+
+@media (max-width: 1024px) {
+  .contact-details__grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-group-row {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+  .contact-form-wrapper {
+    padding: 2.5rem 2rem;
+  }
+  .contact-form input, 
+  .contact-form textarea {
+    cursor: text;
+  }
+}
+
+/* ─── Premium Coverage Radar Map ──────────────────────── */
+.coverage-map-widget {
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--color-glass-border);
+  box-shadow: var(--shadow-glass);
+}
+
+.coverage-map-widget h4 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 750;
+  color: #0f172a;
+  margin-bottom: 0.3rem;
+}
+
+.coverage-map-widget p {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.map-canvas {
+  width: 100%;
+  height: 220px;
+  background: rgba(15, 23, 42, 0.01);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-divider);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.vector-map-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Radar node pulsing */
+.radar-pulse {
+  transform-origin: center;
+  animation: radarWave 2s ease-out infinite;
+}
+
+.radar-node text {
+  fill: var(--color-text-primary);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.radar-node:hover text {
+  opacity: 1;
+}
+
+@keyframes radarWave {
+  0% { r: 4; opacity: 1; }
+  100% { r: 16; opacity: 0; }
+}
+
+/* ─── Virtual biochemist Scheduler ────────────────────── */
+.scheduler-topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.scheduler-topic-btn {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-divider);
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-align: left;
+  line-height: 1.3;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.scheduler-topic-btn:hover {
+  background: #ffffff;
+  border-color: rgba(14, 165, 233, 0.3);
+}
+
+.scheduler-topic-btn--active {
+  background: rgba(14, 165, 233, 0.08) !important;
+  border-color: var(--color-aqua) !important;
+  color: var(--color-aqua) !important;
+  box-shadow: 0 0 10px rgba(14, 165, 233, 0.1);
+}
+
+.scheduler-time-select {
+  width: 100%;
+  padding: 1.1rem 1.4rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-divider);
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+  outline: none;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.scheduler-time-select:focus {
+  border-color: var(--color-aqua);
+  background: #ffffff;
+  box-shadow: 0 0 12px rgba(14, 165, 233, 0.15);
+}
+
+/* Biochemist Avatar Card */
+.biochemist-card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-glass-border);
+  background: rgba(255, 255, 255, 0.8);
+  max-width: 320px;
+  margin: 1.5rem auto;
+  text-align: left;
+}
+
+.bio-avatar {
+  font-size: 2.2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(14, 165, 233, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.bio-info strong {
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.bio-info span {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.success-sub {
+  font-size: 0.9rem !important;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-top: 1.5rem;
+}
+
