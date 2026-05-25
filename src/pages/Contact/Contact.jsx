@@ -63,7 +63,7 @@ export default function Contact() {
             <span className="section-label">Concierge Desk</span>
             <h1 className="contact-hero__title">Let's Connect</h1>
             <p className="contact-hero__subtitle">
-              Have questions about G+ Series technology, custom design integrations, or scheduled service plans? Our concierge team is ready to assist you.
+              Have questions about CCK technology, custom design integrations, or scheduled service plans? Our concierge team is ready to assist you.
             </p>
           </motion.div>
         </div>
@@ -78,7 +78,7 @@ export default function Contact() {
             <div className="contact-channels">
               <div className="channels-title-row">
                 <h2>Direct Channels</h2>
-                <p>Reach out directly to G+ Series corporate service networks.</p>
+                <p>Reach out directly to CCK corporate service networks.</p>
               </div>
 
               <div className="channels-grid">

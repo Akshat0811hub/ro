@@ -92,7 +92,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           >
-            G+ Series delivers <strong>99.9% pure</strong> water through 7-stage intelligent 
+            CCK delivers <strong>99.9% pure</strong> water through 7-stage intelligent 
             filtration with alkaline boost — engineered for those who demand nothing but perfection.
           </motion.p>
 
@@ -150,8 +150,8 @@ export default function Hero() {
             transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           >
             <img
-              src="/assets/blue.jpg.jpeg"
-              alt="G+ Series RO Water Purifier"
+              src="/assets/ro3.png"
+              alt="CCK RO Water Purifier"
               className="hero__purifier-img"
               loading="eager"
             />

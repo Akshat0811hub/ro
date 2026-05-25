@@ -47,23 +47,10 @@ export default function Preloader({ setLoading }) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.8rem' }}
           >
-            <div className="preloader__logo-icon">
-              <svg viewBox="0 0 40 40" fill="none">
-                <path d="M20 4C20 4 8 14 8 22C8 28.627 13.373 34 20 34C26.627 34 32 28.627 32 22C32 14 20 4 20 4Z" fill="url(#dropGrad)" />
-                <path d="M20 14C20 14 14 19 14 23C14 26.314 16.686 29 20 29C23.314 29 26 26.314 26 23C26 19 20 14 20 14Z" fill="rgba(255,255,255,0.3)" />
-                <defs>
-                  <linearGradient id="dropGrad" x1="20" y1="4" x2="20" y2="34" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#00d4ff" />
-                    <stop offset="100%" stopColor="#06f7e8" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <div className="preloader__logo-text">
-              <span className="preloader__brand">G<span>+</span> Series</span>
-              <span className="preloader__tagline">Ultra-Pure Luxury Water</span>
-            </div>
+            <img src="/assets/logo.png" alt="CCK Logo" className="preloader__logo-image" style={{ height: '76px', width: 'auto', objectFit: 'contain', display: 'block', mixBlendMode: 'multiply' }} />
+            <span className="preloader__tagline">Ultra-Pure Luxury Water</span>
           </motion.div>
 
           {/* Animated water ring */}
@@ -72,21 +59,13 @@ export default function Preloader({ setLoading }) {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            style={{ margin: '1rem 0' }}
           >
             <div className="preloader__ring preloader__ring--1" />
             <div className="preloader__ring preloader__ring--2" />
             <div className="preloader__ring preloader__ring--3" />
-            <div className="preloader__drop-icon">
-              <svg viewBox="0 0 60 60" fill="none">
-                <path d="M30 6C30 6 10 22 10 34C10 44.493 19.507 54 30 54C40.493 54 50 44.493 50 34C50 22 30 6 30 6Z" fill="url(#mainDrop)" />
-                <path d="M30 22C30 22 22 29 22 34C22 38.418 25.582 42 30 42C34.418 42 38 38.418 38 34C38 29 30 22 30 22Z" fill="rgba(255,255,255,0.25)" />
-                <defs>
-                  <linearGradient id="mainDrop" x1="30" y1="6" x2="30" y2="54" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#00d4ff" />
-                    <stop offset="100%" stopColor="#06f7e8" />
-                  </linearGradient>
-                </defs>
-              </svg>
+            <div className="preloader__drop-icon" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%' }}>
+              <img src="/assets/logo.png" alt="CCK Logo Purity" className="preloader__center-logo" style={{ width: '90px', height: 'auto', objectFit: 'contain', display: 'block', mixBlendMode: 'multiply' }} />
             </div>
           </motion.div>
 

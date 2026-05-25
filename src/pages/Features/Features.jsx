@@ -28,7 +28,7 @@ export default function Features() {
     {
       icon: <Sparkles size={32} />,
       title: "Alkaline & Mineral Boost",
-      desc: "Typical RO purifiers strip all healthy trace elements. G+ Series features a custom double mineralizing filter that deposits Calcium, Magnesium, and Zinc back into the flow, raising pH levels to an optimal alkaline 8.5.",
+      desc: "Typical RO purifiers strip all healthy trace elements. CCK features a custom double mineralizing filter that deposits Calcium, Magnesium, and Zinc back into the flow, raising pH levels to an optimal alkaline 8.5.",
       tag: "Wellness Enrichment"
     },
     {
@@ -47,7 +47,7 @@ export default function Features() {
 
   const faqs = [
     { q: "How often do I need to replace the G+ filter cartridges?", a: "Depending on your local water hardness profile, filters are generally rated for 10,000 to 12,000 liters (about 12 months of daily family use). The smart panel and app will send alerts when lifespan drops below 10%." },
-    { q: "Does the installation support premium designer sinks?", a: "Yes. G+ Series installation includes options for premium flush-mount sink nozzles, undermount routing, and custom metal finisher adapters to preserve the premium aesthetics of your master kitchen." },
+    { q: "Does the installation support premium designer sinks?", a: "Yes. CCK installation includes options for premium flush-mount sink nozzles, undermount routing, and custom metal finisher adapters to preserve the premium aesthetics of your master kitchen." },
     { q: "Can it handle extremely high borewell TDS values?", a: "Absolutely. Our hyper-performance membrane handles input solute levels up to 2500 ppm, outputting perfectly sweet, light, mineral-balanced water below 80 TDS." }
   ];
 

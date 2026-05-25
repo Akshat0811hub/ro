@@ -160,7 +160,7 @@
 
 /* Mission Section */
 .about-mission {
-  background-color: #ffffff;
+  background-color: var(--color-bg-primary);
 }
 
 .about-mission__grid {
@@ -497,7 +497,10 @@
     font-size: 0.85rem;
   }
   
-  .timeline-detail-card {
-    padding: 2.2rem 1.8rem;
+/* ─── About Gallery Responsive ────────────────────────── */
+@media (max-width: 768px) {
+  .about-gallery__grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
   }
 }

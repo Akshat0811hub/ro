@@ -36,22 +36,8 @@ export default function Navbar() {
     >
       <nav className="navbar__inner container">
         {/* Logo */}
-        <Link to="/" className="navbar__logo">
-          <div className="navbar__logo-icon">
-            <svg viewBox="0 0 32 32" fill="none">
-              <path d="M16 2C16 2 4 11 4 18C4 24.627 9.373 30 16 30C22.627 30 28 24.627 28 18C28 11 16 2 16 2Z" fill="url(#navDrop)" />
-              <path d="M16 12C16 12 11 16 11 19C11 21.761 13.239 24 16 24C18.761 24 21 21.761 21 19C21 16 16 12 16 12Z" fill="rgba(255,255,255,0.25)" />
-              <defs>
-                <linearGradient id="navDrop" x1="16" y1="2" x2="16" y2="30" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stopColor="#0284c7" />
-                  <stop offset="100%" stopColor="#06b6d4" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <div className="navbar__logo-text">
-            <span>G<span className="navbar__logo-plus">+</span> Series</span>
-          </div>
+        <Link to="/" className="navbar__logo" style={{ display: 'flex', alignItems: 'center' }}>
+          <img src="/assets/logo.png" alt="CCK Logo" className="navbar__logo-image" style={{ height: '56px', width: 'auto', objectFit: 'contain', display: 'block', mixBlendMode: 'multiply' }} />
         </Link>
 
         {/* Desktop Links */}

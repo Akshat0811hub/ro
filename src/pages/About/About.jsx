@@ -10,7 +10,7 @@ export default function About() {
     { year: "2018", title: "Molecular Isolation Study", desc: "Our bio-physicists isolated specific solute structures in municipal ground tap water, discovering why standard RO filtration caused acidic taste profile degradation.", detail: "Through high-frequency mass spectrometry, we isolated 12 toxic chemical solutes and patented our first microscopic separation mesh framework." },
     { year: "2020", title: "Bio-Mineralization Loop", desc: "Invented and clinically certified the Bio-Mineral pH Balancer Loop, achieving natural mineral re-injection (Calcium, Zinc, Magnesium).", detail: "Rather than synthetic mineral filters, we modeled our mineralizer on raw Alpine limestone columns, restoring water to pH 8.5 naturally." },
     { year: "2022", title: "Double Copper Active Defense", desc: "Patented our active copper-zinc nano-deposition columns, incorporating automated UV-C purification loops.", detail: "This prevents water stagnation in storage tanks, maintaining absolute bio-purity for up to 14 days without standard filter decay." },
-    { year: "2024", title: "G+ Series Masterpiece Release", desc: "Successfully integrated bio-physics purification tech into an ultra-slim 12.8cm double-anodized glass armor chassis.", detail: "Released G+ Classic, Pro, and Eco models worldwide, winning the Biotech Innovation Award for premium home health." }
+    { year: "2024", title: "CCK Masterpiece Release", desc: "Successfully integrated bio-physics purification tech into an ultra-slim 12.8cm double-anodized glass armor chassis.", detail: "Released G+ Classic, Pro, and Eco models worldwide, winning the Biotech Innovation Award for premium home health." }
   ];
 
   const containerVariants = {
@@ -57,7 +57,7 @@ export default function About() {
               Crafting the Future of <span className="gradient-text">Pure Hydration</span>
             </h1>
             <p className="about-hero__subtitle">
-              We believe water is the base molecule of human potential. G+ Series was born to redefine how the modern home experiences pure, mineral-balanced health.
+              We believe water is the base molecule of human potential. CCK was born to redefine how the modern home experiences pure, mineral-balanced health.
             </p>
           </motion.div>
         </div>
@@ -75,9 +75,10 @@ export default function About() {
               transition={{ duration: 0.8 }}
             >
               <img 
-                src="/assets/blue.jpg.jpeg" 
+                src="/assets/ro1.png" 
                 alt="RO filtration research" 
                 className="about-story__img"
+                style={{ objectFit: 'contain', background: 'radial-gradient(circle, rgba(159,188,171,0.06) 0%, transparent 70%)' }}
               />
               <div className="about-story__img-overlay" />
             </motion.div>
@@ -95,7 +96,7 @@ export default function About() {
                 In 2018, our team of bio-physicists set out to solve a massive design challenge: Standard RO purifiers stripped away all the good health qualities of natural water, leaving it acidic and flavorless.
               </p>
               <p>
-                Through years of dynamic testing, we developed our trademarked Bio-Mineral pH balancer loop. We coupled this advanced hydration science with sleek double-anodized glass armor, ensuring G+ Series purifiers double as high-end interior art.
+                Through years of dynamic testing, we developed our trademarked Bio-Mineral pH balancer loop. We coupled this advanced hydration science with sleek double-anodized glass armor, ensuring CCK purifiers double as high-end interior art.
               </p>
               <div className="about-story__award glass">
                 <Award size={20} className="text-aqua" />
@@ -104,6 +105,83 @@ export default function About() {
                   <span>Awarded for natural mineral-restoration efficiency.</span>
                 </div>
               </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dynamic Image Grid Space for Future Photos */}
+      <section className="about-gallery section">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-label">State of the Art Facilities</span>
+            <h2 className="section-title">Our Innovation Labs</h2>
+            <p className="section-subtitle">
+              Take a glance inside our molecular physics laboratory and automated glass-anodizing assembly lines (Images coming soon).
+            </p>
+          </div>
+
+          <div className="about-gallery__grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2.5rem', marginTop: '2rem' }}>
+            {/* Laboratory Placeholder */}
+            <motion.div 
+              className="glass" 
+              style={{
+                borderRadius: 'var(--radius-lg)',
+                padding: '3rem 2rem',
+                textAlign: 'center',
+                minHeight: '320px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                border: '1px solid var(--color-glass-border)',
+                background: 'linear-gradient(135deg, rgba(159, 188, 171, 0.03) 0%, rgba(11, 76, 140, 0.03) 100%)',
+                position: 'relative',
+                overflow: 'hidden'
+              }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
+              <div style={{ fontSize: '3rem', marginBottom: '1.2rem', filter: 'grayscale(0.3)' }}>🧪</div>
+              <h4 style={{ fontSize: '1.25rem', fontWeight: '700', marginBottom: '0.5rem', color: 'var(--color-text-primary)' }}>R&D Molecular Science Lab</h4>
+              <p style={{ fontSize: '0.88rem', color: 'var(--color-text-secondary)', maxWidth: '280px', lineHeight: '1.6' }}>
+                [Factory & R&D Laboratory Image Space]<br/>
+                Replace this placeholder with a photo of the chromatography testing suite.
+              </p>
+              <div className="why-us__image-placeholder-inner" />
+            </motion.div>
+
+            {/* Team/Specialists Placeholder */}
+            <motion.div 
+              className="glass" 
+              style={{
+                borderRadius: 'var(--radius-lg)',
+                padding: '3rem 2rem',
+                textAlign: 'center',
+                minHeight: '320px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                border: '1px solid var(--color-glass-border)',
+                background: 'linear-gradient(135deg, rgba(11, 76, 140, 0.03) 0%, rgba(159, 188, 171, 0.03) 100%)',
+                position: 'relative',
+                overflow: 'hidden'
+              }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+            >
+              <div style={{ fontSize: '3rem', marginBottom: '1.2rem', filter: 'grayscale(0.3)' }}>👥</div>
+              <h4 style={{ fontSize: '1.25rem', fontWeight: '700', marginBottom: '0.5rem', color: 'var(--color-text-primary)' }}>Our Biotech Specialists</h4>
+              <p style={{ fontSize: '0.88rem', color: 'var(--color-text-secondary)', maxWidth: '280px', lineHeight: '1.6' }}>
+                [Our Biotech Specialists Image Space]<br/>
+                Replace this placeholder with a photo of your chief hydrological engineering crew.
+              </p>
+              <div className="why-us__image-placeholder-inner" />
             </motion.div>
           </div>
         </div>

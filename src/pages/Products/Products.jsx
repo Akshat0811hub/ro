@@ -10,14 +10,50 @@ export default function Products() {
 
   const productsList = [
     { 
-      id: 'blue', 
-      name: "G+ Series Royal Blue", 
+      id: 'ro1', 
+      name: "CCK Pearl White", 
       price: "$449", 
+      tag: "Ultra Flagship", 
+      category: 'classic',
+      desc: "Sleek, stunning white porcelain glaze housing with micro-gold anodized nozzle lines. Built with high-purity mineral balance.", 
+      img: "/assets/ro1.png",
+      colorCode: "#9fbcab",
+      specs: {
+        filtration: "8-Stage Premium RO + UV + UF",
+        flowRate: "15 Litres / Hour",
+        tdsLimit: "Up to 2500 ppm",
+        capacity: "10.5 Litres Storage",
+        warranty: "5 Years Comprehensive",
+        efficiency: "Eco Recovery (75% Recovery)"
+      }
+    },
+    { 
+      id: 'ro2', 
+      name: "CCK Emerald Mint", 
+      price: "$459", 
+      tag: "Eco Premium", 
+      category: 'eco',
+      desc: "Beautiful sage-mint casing equipped with our trademarked double eco-recovery loop, reclaiming municipal brine water for ultimate sustainability.", 
+      img: "/assets/ro2.png",
+      colorCode: "#829e8d",
+      specs: {
+        filtration: "7-Stage Eco RO + UV + UF",
+        flowRate: "13 Litres / Hour",
+        tdsLimit: "Up to 2200 ppm",
+        capacity: "9.5 Litres Storage",
+        warranty: "5 Years Comprehensive",
+        efficiency: "Zero Waste (90% Recovery)"
+      }
+    },
+    { 
+      id: 'ro3', 
+      name: "CCK Sapphire Blue", 
+      price: "$479", 
       tag: "Best Seller", 
       category: 'classic',
-      desc: "Classic deep royal blue finish featuring advanced copper-zinc bio-mineralization. Perfect for standard family sizes.", 
-      img: "/assets/blue.jpg.jpeg",
-      colorCode: "#0ea5e9",
+      desc: "Deep royal sapphire casing featuring double copper-zinc bio-mineralization. Perfect for standard family sizes.", 
+      img: "/assets/ro3.png",
+      colorCode: "#0b4c8c",
       specs: {
         filtration: "7-Stage RO + UV + UF",
         flowRate: "12 Litres / Hour",
@@ -28,16 +64,16 @@ export default function Products() {
       }
     },
     { 
-      id: 'black', 
-      name: "G+ Series Carbon Black", 
+      id: 'ro4', 
+      name: "CCK Platinum Slate", 
       price: "$499", 
-      tag: "Pro Flagship", 
+      tag: "Pro Minimalist", 
       category: 'pro',
-      desc: "Futuristic double-anodized deep space black finish. Features active digital water volume controls and ambient night cup light.", 
-      img: "/assets/black.jpg.jpeg",
+      desc: "Futuristic double-anodized deep slate black casing. Features ambient cup lighting and active smartphone app control.", 
+      img: "/assets/ro4.png",
       colorCode: "#1e293b",
       specs: {
-        filtration: "8-Stage Intelligent RO+UV+UF",
+        filtration: "8-Stage Premium RO + UV + UF",
         flowRate: "15 Litres / Hour",
         tdsLimit: "Up to 2500 ppm",
         capacity: "10.5 Litres Storage",
@@ -46,39 +82,21 @@ export default function Products() {
       }
     },
     { 
-      id: 'desert-brown', 
-      name: "G+ Series Desert Brown", 
-      price: "$479", 
+      id: 'ro5', 
+      name: "CCK Amber Gold", 
+      price: "$529", 
       tag: "Limited Luxury", 
-      category: 'classic',
-      desc: "An earthy, luxurious dark bronze finish crafted to blend seamlessly into premium solid-wood designer kitchen spaces.", 
-      img: "/assets/desert brown.jpg.jpeg",
+      category: 'pro',
+      desc: "An elegant, limited-edition gold-anodized profile crafted to blend seamlessly into luxury designer solid-wood kitchen layouts.", 
+      img: "/assets/ro5.png",
       colorCode: "#b45309",
       specs: {
-        filtration: "7-Stage Classic RO+UV+UF",
-        flowRate: "12 Litres / Hour",
-        tdsLimit: "Up to 2000 ppm",
-        capacity: "9.5 Litres Storage",
+        filtration: "7-Stage Classic RO + UV + UF",
+        flowRate: "14 Litres / Hour",
+        tdsLimit: "Up to 2400 ppm",
+        capacity: "12.0 Litres Storage",
         warranty: "5 Years Comprehensive",
         efficiency: "Eco Recovery (75% Recovery)"
-      }
-    },
-    { 
-      id: 'sea-green', 
-      name: "G+ Series Sea Green", 
-      price: "$459", 
-      tag: "Eco Friendly", 
-      category: 'eco',
-      desc: "Refreshing sea green mineralizing casing. Equipped with our premium dual loop recovery achieving near-zero wastewater.", 
-      img: "/assets/sea green.jpg.jpeg",
-      colorCode: "#10b981",
-      specs: {
-        filtration: "7-Stage Eco RO + UV + UF",
-        flowRate: "13 Litres / Hour",
-        tdsLimit: "Up to 2200 ppm",
-        capacity: "9.5 Litres Storage",
-        warranty: "5 Years Comprehensive",
-        efficiency: "Zero Waste (90% Recovery)"
       }
     }
   ];
@@ -288,7 +306,7 @@ export default function Products() {
               <Cpu size={24} className="text-aqua" />
             </div>
             <div>
-              <h3>All G+ Series Models Feature:</h3>
+              <h3>All CCK Models Feature:</h3>
               <p>
                 7-Stage intelligent purification, natural alkaline bio-restoration, double copper defense, 5-year warranty, and free lifetime professional service checks.
               </p>

@@ -44,3 +44,55 @@
 @media (max-width: 768px) {
   .cursor-dot, .cursor-ring { display: none; }
 }
+
+/* Water Ripple Click Effect */
+.water-ripple {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid rgba(11, 76, 140, 0.45);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99997;
+  transform: translate(-50%, -50%);
+  animation: rippleSpread 0.8s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+  box-shadow: inset 0 0 8px rgba(11, 76, 140, 0.05), 0 0 12px rgba(11, 76, 140, 0.08);
+  will-change: transform, opacity;
+}
+
+/* Second delayed wave for organic fluid response */
+.water-ripple::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border: 1px dashed rgba(11, 76, 140, 0.2);
+  border-radius: 50%;
+  animation: rippleSpreadDelay 0.8s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+  animation-delay: 0.15s;
+}
+
+@keyframes rippleSpread {
+  0% {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    border-width: 2px;
+  }
+  100% {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+    border-width: 0.5px;
+  }
+}
+
+@keyframes rippleSpreadDelay {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}

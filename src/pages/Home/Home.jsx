@@ -75,13 +75,13 @@ export default function Home() {
   // Product show config list
   const productsList = [
     {
-      id: 'black',
-      name: 'G+ Series Carbon Black',
-      price: '$499',
-      img: '/assets/black.jpg.jpeg',
-      colorCode: '#1e293b',
-      tag: 'Pro Flagship',
-      desc: 'Futuristic double-anodized deep space black finish. Engineered with a triple core stainless steel fluid loop. Features active TDS optimization, smart volume dispense controls, and ambient cup lighting.',
+      id: 'ro1',
+      name: 'CCK Pearl White',
+      price: '$449',
+      img: '/assets/ro1.png',
+      colorCode: '#9fbcab',
+      tag: 'Ultra Flagship',
+      desc: 'Sleek, stunning white porcelain glaze housing with micro-gold anodized nozzle lines. Built with high-purity mineral balance.',
       bullets: [
         'Ultra-slick 12.8cm thin chassis profile',
         'Interactive Glass Touch Panel UI',
@@ -95,13 +95,33 @@ export default function Home() {
       }
     },
     {
-      id: 'blue',
-      name: 'G+ Series Royal Blue',
-      price: '$449',
-      img: '/assets/blue.jpg.jpeg',
-      colorCode: '#0ea5e9',
+      id: 'ro2',
+      name: 'CCK Emerald Mint',
+      price: '$459',
+      img: '/assets/ro2.png',
+      colorCode: '#829e8d',
+      tag: 'Eco Premium',
+      desc: 'Beautiful sage-mint casing equipped with our trademarked double eco-recovery loop, reclaiming municipal brine water for ultimate sustainability.',
+      bullets: [
+        'Zero-waste waste water recovery loop',
+        'Interactive copper flow nozzle accents',
+        'Natural bio-alkaline pH booster'
+      ],
+      specs: {
+        filtration: '7-Stage Eco RO + UV + UF',
+        flowRate: '13 Litres / Hour',
+        tdsLimit: 'Up to 2200 ppm',
+        capacity: '9.5 Litres Storage'
+      }
+    },
+    {
+      id: 'ro3',
+      name: 'CCK Sapphire Blue',
+      price: '$479',
+      img: '/assets/ro3.png',
+      colorCode: '#0b4c8c',
       tag: 'Best Seller',
-      desc: 'Classic deep royal blue finish featuring advanced copper-zinc bio-mineralization. Perfect for standard family sizes and luxury modern layouts.',
+      desc: 'Deep royal sapphire casing featuring double copper-zinc bio-mineralization. Perfect for standard family sizes and luxury modern layouts.',
       bullets: [
         'Advanced bio-mineral alkaline restorer',
         'Stunning light-luxury sapphire glass casing',
@@ -115,49 +135,49 @@ export default function Home() {
       }
     },
     {
-      id: 'desert-brown',
-      name: 'G+ Series Desert Brown',
-      price: '$479',
-      img: '/assets/desert brown.jpg.jpeg',
-      colorCode: '#b45309',
-      tag: 'Limited Luxury',
-      desc: 'An earthy, luxurious dark bronze finish crafted to blend seamlessly into premium solid-wood and gold-accented designer kitchen spaces.',
+      id: 'ro4',
+      name: 'CCK Platinum Slate',
+      price: '$499',
+      img: '/assets/ro4.png',
+      colorCode: '#1e293b',
+      tag: 'Pro Minimalist',
+      desc: 'Futuristic double-anodized deep slate black casing. Features ambient cup lighting and active smartphone app control.',
       bullets: [
-        'Customized dark bronze anodized profile',
-        'Interactive copper flow nozzle accents',
-        'Eco-Recovery loop (75% Recovery)'
+        'Customized dark slate anodized profile',
+        'Ambient nighttime cup lighting',
+        'Full smart-app WiFi diagnostics integration'
       ],
       specs: {
-        filtration: '7-Stage Classic RO + UV + UF',
-        flowRate: '12 Litres / Hour',
-        tdsLimit: 'Up to 2000 ppm',
-        capacity: '9.5 Litres Storage'
+        filtration: '8-Stage Premium RO + UV + UF',
+        flowRate: '15 Litres / Hour',
+        tdsLimit: 'Up to 2500 ppm',
+        capacity: '10.5 Litres Storage'
       }
     },
     {
-      id: 'sea-green',
-      name: 'G+ Series Sea Green',
-      price: '$459',
-      img: '/assets/sea green.jpg.jpeg',
-      colorCode: '#10b981',
-      tag: 'Eco Friendly',
-      desc: 'A refreshing marine finish that integrates our eco-reclaim purification engine, recycling input waste water to achieve near absolute zero wastage.',
+      id: 'ro5',
+      name: 'CCK Amber Gold',
+      price: '$529',
+      img: '/assets/ro5.png',
+      colorCode: '#b45309',
+      tag: 'Limited Luxury',
+      desc: 'An elegant, limited-edition gold-anodized profile crafted to blend seamlessly into luxury designer solid-wood kitchen layouts.',
       bullets: [
-        'Refreshing marine mineralizing casing',
-        'Zero waste dual loop recovery system',
-        'Bio-Mineral pH balancer loop'
+        'Prestige 24k gold-brushed metal accents',
+        'Bio-Mineral pH balancer column',
+        'Extra wide 12L storage capacity'
       ],
       specs: {
-        filtration: '7-Stage Eco RO + UV + UF',
-        flowRate: '13 Litres / Hour',
-        tdsLimit: 'Up to 2200 ppm',
-        capacity: '9.5 Litres Storage'
+        filtration: '7-Stage Classic RO + UV + UF',
+        flowRate: '14 Litres / Hour',
+        tdsLimit: 'Up to 2400 ppm',
+        capacity: '12.0 Litres Storage'
       }
     }
   ];
 
   // Derive backwards-compatible helpers
-  const activeColor = productsList[activeProductIndex].id;
+  const activeColor = productsList[activeProductIndex]?.id || 'ro1';
   const setActiveColor = (colorId) => {
     const idx = productsList.findIndex(p => p.id === colorId);
     if (idx !== -1) {
@@ -167,10 +187,11 @@ export default function Home() {
   };
 
   const products = {
-    black: productsList[0],
-    blue: productsList[1],
-    'desert brown': productsList[2],
-    'sea green': productsList[3]
+    ro1: productsList[0],
+    ro2: productsList[1],
+    ro3: productsList[2],
+    ro4: productsList[3],
+    ro5: productsList[4]
   };
 
   const handlePrev = () => {
@@ -221,10 +242,10 @@ export default function Home() {
   ];
 
   const FAQs = [
-    { q: 'How does the G+ Series restore natural minerals?', a: 'Standard RO purifiers strip water of good minerals. Our Alkaline Boost filter introduces calculated bio-available amounts of Calcium, Magnesium, and Zinc back into the post-purified water, raising pH naturally to an alkaline 8.5.' },
-    { q: 'Does the purifier waste water?', a: 'No! The G+ Series features our Eco-Recovery loop which redirects high-solute reject water back to your overhead storage or utility tap, achieving near-zero wastage.' },
-    { q: 'What TDS levels can G+ Series handle?', a: 'G+ Series is engineered for complex raw water profiles. It handles input TDS up to 2500 ppm effortlessly, outputting highly sweet, balanced water below 80 TDS.' },
-    { q: 'How long does the filter last?', a: 'Typically, G+ Series filters last between 10,000 to 12,000 liters. The smart display and mobile app will alert you well in advance when the filter drops below 10% capacity.' }
+    { q: 'How does the CCK restore natural minerals?', a: 'Standard RO purifiers strip water of good minerals. Our Alkaline Boost filter introduces calculated bio-available amounts of Calcium, Magnesium, and Zinc back into the post-purified water, raising pH naturally to an alkaline 8.5.' },
+    { q: 'Does the purifier waste water?', a: 'No! The CCK features our Eco-Recovery loop which redirects high-solute reject water back to your overhead storage or utility tap, achieving near-zero wastage.' },
+    { q: 'What TDS levels can CCK handle?', a: 'CCK is engineered for complex raw water profiles. It handles input TDS up to 2500 ppm effortlessly, outputting highly sweet, balanced water below 80 TDS.' },
+    { q: 'How long does the filter last?', a: 'Typically, CCK filters last between 10,000 to 12,000 liters. The smart display and mobile app will alert you well in advance when the filter drops below 10% capacity.' }
   ];
 
   const handleForm = (e) => {
@@ -258,31 +279,50 @@ export default function Home() {
         <div className="container">
           <div className="section-header">
             <span className="section-label">Pure Perfection</span>
-            <h2 className="section-title">Why Choose G+ Series?</h2>
+            <h2 className="section-title">Why Choose CCK?</h2>
             <p className="section-subtitle">
               Engineered like a sports car, purified like a scientific lab. The ultimate union of health and elegance.
             </p>
           </div>
 
-          <div className="why-us__grid">
-            {whyChooseUs.map((item, idx) => (
-              <motion.div
-                key={idx}
-                className="why-us__card glass"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.6, delay: idx * 0.1, ease: 'easeOut' }}
-                whileHover={{ y: -8, transition: { duration: 0.2 } }}
-              >
-                <div className="why-us__icon-container">
-                  {item.icon}
-                </div>
-                <h3 className="why-us__card-title">{item.title}</h3>
-                <p className="why-us__card-desc">{item.desc}</p>
-                <div className="why-us__card-glow" />
-              </motion.div>
-            ))}
+          <div className="why-us__layout">
+            <div className="why-us__grid">
+              {whyChooseUs.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  className="why-us__card glass"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-50px' }}
+                  transition={{ duration: 0.6, delay: idx * 0.1, ease: 'easeOut' }}
+                  whileHover={{ y: -8, transition: { duration: 0.2 } }}
+                >
+                  <div className="why-us__icon-container">
+                    {item.icon}
+                  </div>
+                  <h3 className="why-us__card-title">{item.title}</h3>
+                  <p className="why-us__card-desc">{item.desc}</p>
+                  <div className="why-us__card-glow" />
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Lifestyle Image Placeholder Panel */}
+            <motion.div
+              className="why-us__image-placeholder glass"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div style={{ fontSize: '3rem', marginBottom: '1.5rem', filter: 'grayscale(0.3)' }}>🏡</div>
+              <h4 style={{ fontSize: '1.25rem', fontWeight: '700', marginBottom: '0.6rem', color: 'var(--color-text-primary)' }}>Luxury Kitchen Integration</h4>
+              <p style={{ fontSize: '0.88rem', color: 'var(--color-text-secondary)', maxWidth: '260px', lineHeight: '1.6' }}>
+                [Premium Lifestyle Assembly Image Space]<br/>
+                Replace this placeholder with a photo of your G+ installation in a designer master-kitchen space.
+              </p>
+              <div className="why-us__image-placeholder-inner" />
+            </motion.div>
           </div>
         </div>
       </section>
@@ -378,6 +418,27 @@ export default function Home() {
                     </div>
                   </motion.div>
                 </AnimatePresence>
+              </div>
+
+              {/* Interactive Multi-Image Gallery Grid ("use more image") */}
+              <div className="product-showcase__gallery">
+                {productsList.map((prod, idx) => (
+                  <button
+                    key={prod.id}
+                    className={`product-showcase__gallery-item glass ${activeProductIndex === idx ? 'product-showcase__gallery-item--active' : ''}`}
+                    onClick={() => {
+                      setSlideDirection(idx > activeProductIndex ? 1 : -1);
+                      setActiveProductIndex(idx);
+                    }}
+                  >
+                    <img 
+                      src={prod.img} 
+                      alt={prod.name} 
+                      className="product-showcase__gallery-img" 
+                    />
+                    <span className="product-showcase__gallery-name">{prod.name.replace('CCK ', '')}</span>
+                  </button>
+                ))}
               </div>
 
               {/* Slider Controls */}
@@ -476,6 +537,40 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Blueprint Diagram Placeholder panel */}
+          <motion.div 
+            className="tech-blueprint-placeholder glass"
+            style={{
+              borderRadius: 'var(--radius-lg)',
+              padding: '2.5rem',
+              marginTop: '4rem',
+              border: '1px solid var(--color-glass-border)',
+              minHeight: '260px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              textAlign: 'center',
+              background: 'linear-gradient(135deg, rgba(11, 76, 140, 0.03) 0%, rgba(159, 188, 171, 0.03) 100%)',
+              position: 'relative',
+              overflow: 'hidden',
+              width: '100%'
+            }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <div>
+              <div style={{ fontSize: '3rem', marginBottom: '1.2rem', filter: 'grayscale(0.5)' }}>📐</div>
+              <h4 style={{ fontSize: '1.2rem', fontWeight: '700', marginBottom: '0.4rem', color: 'var(--color-text-primary)' }}>Purifier Molecular Filtration Blueprint</h4>
+              <p style={{ fontSize: '0.85rem', color: 'var(--color-text-secondary)', maxWidth: '420px', margin: '0 auto', lineHeight: '1.6' }}>
+                [Filtration Cartridges Blueprint / Diagram Space]<br/>
+                Replace this placeholder with a technical blueprint drawing or rendering of G+ internal filter loops.
+              </p>
+            </div>
+            <div className="why-us__image-placeholder-inner" />
+          </motion.div>
         </div>
       </section>
 
@@ -486,7 +581,7 @@ export default function Home() {
             <span className="section-label">Endorsement</span>
             <h2 className="section-title">Trusted by Taste Connoisseurs</h2>
             <p className="section-subtitle">
-              See how G+ Series is transforming wellness, skin-hydration, and taste profiles across premium homes.
+              See how CCK is transforming wellness, skin-hydration, and taste profiles across premium homes.
             </p>
           </div>
 
