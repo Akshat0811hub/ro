@@ -144,7 +144,9 @@ export default function Products() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           >
             <span className="section-label">G+ Masterpieces</span>
-            <h1 className="catalog-hero__title">The Premium Pure Collection</h1>
+            <h1 className="catalog-hero__title">
+              The Premium <span className="text-white">Pure Collection</span>
+            </h1>
             <p className="catalog-hero__subtitle">
               Sleek profiles, flawless water chemistry, and Apple-grade finishes. Select the model built for your lifestyle.
             </p>

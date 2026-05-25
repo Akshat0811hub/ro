@@ -70,7 +70,7 @@ export default function Features() {
           >
             <span className="section-label">Cutting-Edge Tech</span>
             <h1 className="features-hero__title">
-              Engineering <span className="gradient-text">Water Chemistry</span>
+              Engineering <span className="text-white">Water Chemistry</span>
             </h1>
             <p className="features-hero__subtitle">
               Explore the advanced biological physics, double copper infusion filters, and active smartphone controls that power the luxury G+ hydration series.

@@ -77,9 +77,13 @@
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 850;
   line-height: 1.1;
-  color: #0f172a;
+  color: #000000;
   margin: 1rem 0 1.5rem 0;
   letter-spacing: -0.03em;
+}
+
+.about-hero__highlight {
+  color: #ffffff;
 }
 
 .about-hero__subtitle {

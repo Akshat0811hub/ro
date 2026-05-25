@@ -106,6 +106,12 @@ p { line-height: 1.7; }
   background-clip: text;
 }
 
+/* ─── White Text Utility ─────────────────────────────────── */
+.text-white {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
 /* ─── Section Label ──────────────────────────────────────── */
 .section-label {
   display: inline-flex;

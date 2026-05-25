@@ -64,7 +64,7 @@ export default function About() {
           >
             <span className="section-label">Our Philosophy</span>
             <h1 className="about-hero__title">
-              Crafting the Future of <span className="gradient-text">Pure Hydration</span>
+              Crafting the Future <span className="about-hero__highlight">of Pure Hydration</span>
             </h1>
             <p className="about-hero__subtitle">
               We believe water is the base molecule of human potential. CCK was born to redefine how the modern home experiences pure, mineral-balanced health.
