@@ -332,7 +332,7 @@
 /* ── Water Flow ───────────────────────────────────────── */
 .hero__water-flow {
   position: absolute;
-  bottom: -40px;
+  bottom: -80px;
   left: 50%;
   transform: translateX(-50%);
   pointer-events: none;
@@ -341,7 +341,7 @@
 .hero__water-stream {
   width: 14px;
   height: 80px;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.2));
+  background: transaparent;
   margin: 0 auto;
   border-radius: var(--radius-full);
   animation: streamFlow 1.5s ease-in-out infinite;
@@ -365,7 +365,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(15, 23, 42, 0.9);
+  background: rgb(39, 198, 251);
   box-shadow: 0 0 10px rgba(15, 23, 42, 0.4);
   left: 50%;
   transform: translateX(-50%);
