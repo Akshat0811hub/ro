@@ -41,6 +41,16 @@ export default function About() {
       {/* Immersive Hero */}
       <section className="about-hero">
         <div className="about-hero__bg">
+          <video 
+            className="about-hero__video" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+          >
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-water-splashing-in-slow-motion-41810-large.mp4" type="video/mp4" />
+          </video>
+          <div className="about-hero__video-overlay" />
           <div className="about-orb about-orb--1" />
           <div className="about-orb about-orb--2" />
         </div>

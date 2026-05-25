@@ -23,6 +23,7 @@ export default function Home() {
   const [activeProductIndex, setActiveProductIndex] = useState(1); // 'blue'
   const [slideDirection, setSlideDirection] = useState(0);
   const [activeStage, setActiveStage] = useState(0);
+  const [showBlueprintModal, setShowBlueprintModal] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [name, setName] = useState('');
@@ -538,38 +539,59 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Blueprint Diagram Placeholder panel */}
+          {/* Blueprint Diagram Panel */}
           <motion.div 
-            className="tech-blueprint-placeholder glass"
+            className="tech-blueprint-placeholder glass magnetic"
             style={{
               borderRadius: 'var(--radius-lg)',
-              padding: '2.5rem',
+              padding: '3.5rem 2.5rem',
               marginTop: '4rem',
-              border: '1px solid var(--color-glass-border)',
-              minHeight: '260px',
+              border: '1px solid rgba(255, 255, 255, 0.25)',
+              minHeight: '300px',
               display: 'flex',
+              flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
               textAlign: 'center',
-              background: 'linear-gradient(135deg, rgba(11, 76, 140, 0.03) 0%, rgba(159, 188, 171, 0.03) 100%)',
+              background: "linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.85)), url('/assets/7stages.jpg') no-repeat center center / cover",
               position: 'relative',
               overflow: 'hidden',
-              width: '100%'
+              width: '100%',
+              cursor: 'pointer',
+              boxShadow: 'var(--shadow-glass)'
             }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            onClick={() => setShowBlueprintModal(true)}
+            whileHover={{ scale: 1.01, border: '1px solid var(--color-aqua)', transition: { duration: 0.2 } }}
           >
-            <div>
-              <div style={{ fontSize: '3rem', marginBottom: '1.2rem', filter: 'grayscale(0.5)' }}>📐</div>
-              <h4 style={{ fontSize: '1.2rem', fontWeight: '700', marginBottom: '0.4rem', color: 'var(--color-text-primary)' }}>Purifier Molecular Filtration Blueprint</h4>
-              <p style={{ fontSize: '0.85rem', color: 'var(--color-text-secondary)', maxWidth: '420px', margin: '0 auto', lineHeight: '1.6' }}>
-                [Filtration Cartridges Blueprint / Diagram Space]<br/>
-                Replace this placeholder with a technical blueprint drawing or rendering of G+ internal filter loops.
+            <div style={{ position: 'relative', zIndex: 3 }}>
+              <div style={{ fontSize: '3.2rem', marginBottom: '1rem', filter: 'drop-shadow(0 0 15px rgba(14, 165, 233, 0.4))' }}>🔍</div>
+              <h4 style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '0.6rem', color: '#ffffff', fontFamily: 'Outfit, sans-serif', letterSpacing: '-0.01em' }}>Explore 7-Stage Molecular Filtration Blueprint</h4>
+              <p style={{ fontSize: '0.92rem', color: '#cbd5e1', maxWidth: '520px', margin: '0 auto 1.5rem auto', lineHeight: '1.6', fontWeight: '500' }}>
+                View the high-resolution engineering blueprint of internal filtration cartridge loops, active copper lines, and fluid mechanics.
               </p>
+              <button 
+                className="btn-primary magnetic" 
+                style={{ 
+                  margin: '0 auto',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  backdropFilter: 'blur(8px)',
+                  border: '1px solid rgba(255, 255, 255, 0.3)',
+                  color: '#ffffff',
+                  boxShadow: 'none'
+                }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowBlueprintModal(true);
+                }}
+              >
+                View High-Resolution Schematic
+              </button>
             </div>
-            <div className="why-us__image-placeholder-inner" />
+            <div className="why-us__image-placeholder-inner" style={{ borderColor: 'rgba(255, 255, 255, 0.15)' }} />
           </motion.div>
         </div>
       </section>
@@ -756,6 +778,114 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      {/* Lightbox / Modal for 7-Stage Blueprint */}
+      <AnimatePresence>
+        {showBlueprintModal && (
+          <motion.div 
+            className="blueprint-modal-overlay" 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setShowBlueprintModal(false)}
+            style={{
+              position: 'fixed',
+              inset: 0,
+              backgroundColor: 'rgba(15, 23, 42, 0.85)',
+              backdropFilter: 'blur(16px)',
+              zIndex: 9999,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '2rem',
+              cursor: 'zoom-out'
+            }}
+          >
+            <motion.div 
+              className="blueprint-modal-content glass"
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 20 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              onClick={(e) => e.stopPropagation()}
+              style={{
+                position: 'relative',
+                maxWidth: '90%',
+                maxHeight: '90%',
+                borderRadius: 'var(--radius-xl)',
+                overflow: 'hidden',
+                border: '1px solid rgba(255, 255, 255, 0.25)',
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.6)',
+                background: 'rgba(15, 23, 42, 0.4)',
+                cursor: 'default',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center'
+              }}
+            >
+              <button 
+                onClick={() => setShowBlueprintModal(false)}
+                style={{
+                  position: 'absolute',
+                  top: '1.2rem',
+                  right: '1.2rem',
+                  background: 'rgba(15, 23, 42, 0.75)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  color: '#fff',
+                  borderRadius: '50%',
+                  width: '38px',
+                  height: '38px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  fontSize: '1rem',
+                  fontWeight: 'bold',
+                  zIndex: 10,
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.3)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#ef4444';
+                  e.currentTarget.style.transform = 'scale(1.05)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(15, 23, 42, 0.75)';
+                  e.currentTarget.style.transform = 'scale(1)';
+                }}
+              >
+                ✕
+              </button>
+              <img 
+                src="/assets/7stages.jpg" 
+                alt="7-Stage Purification Engine Blueprint" 
+                style={{
+                  maxWidth: '100%',
+                  maxHeight: '75vh',
+                  objectFit: 'contain',
+                  display: 'block'
+                }}
+              />
+              <div 
+                style={{
+                  padding: '1.5rem 2.5rem',
+                  background: 'rgba(15, 23, 42, 0.95)',
+                  width: '100%',
+                  textAlign: 'center',
+                  color: '#f8fafc',
+                  borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.3rem'
+                }}
+              >
+                <h4 style={{ margin: 0, fontSize: '1.2rem', fontWeight: '800', fontFamily: 'Outfit, sans-serif', color: '#ffffff', letterSpacing: '-0.01em' }}>Technical 7-Stage Purification Blueprint</h4>
+                <p style={{ margin: 0, fontSize: '0.88rem', color: '#94a3b8' }}>Comprehensive molecular filtration breakdown and active fluid dynamics loops.</p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
