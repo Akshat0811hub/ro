@@ -340,8 +340,32 @@ export default function Home() {
           </div>
 
           <div className="product-showcase__slider-layout">
-            <div className="product-showcase__content-carousel">
+            <div className="product-showcase__main-container">
               
+              {/* Interactive Multi-Image Gallery Column */}
+              <div className="product-showcase__gallery">
+                {productsList.map((prod, idx) => (
+                  <button
+                    key={prod.id}
+                    className={`product-showcase__gallery-item glass ${activeProductIndex === idx ? 'product-showcase__gallery-item--active' : ''}`}
+                    onClick={() => {
+                      setSlideDirection(idx > activeProductIndex ? 1 : -1);
+                      setActiveProductIndex(idx);
+                    }}
+                  >
+                    <img 
+                      src={prod.img} 
+                      alt={prod.name} 
+                      className="product-showcase__gallery-img" 
+                    />
+                    <div className="product-showcase__gallery-info">
+                      <span className="product-showcase__gallery-name">{prod.name.replace('CCK ', '')}</span>
+                      <span className="product-showcase__gallery-price">{prod.price}</span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+
               {/* Product Card Sliding Wrapper */}
               <div className="product-showcase__slide-viewport">
                 <AnimatePresence custom={slideDirection} mode="wait">
@@ -421,51 +445,30 @@ export default function Home() {
                 </AnimatePresence>
               </div>
 
-              {/* Interactive Multi-Image Gallery Grid ("use more image") */}
-              <div className="product-showcase__gallery">
-                {productsList.map((prod, idx) => (
+            </div>
+
+            {/* Slider Controls */}
+            <div className="product-slider-controls">
+              <button className="slider-arrow prev-arrow glass magnetic" onClick={handlePrev} aria-label="Previous product">
+                <ArrowLeft size={18} />
+              </button>
+              <div className="slider-dots">
+                {productsList.map((_, idx) => (
                   <button
-                    key={prod.id}
-                    className={`product-showcase__gallery-item glass ${activeProductIndex === idx ? 'product-showcase__gallery-item--active' : ''}`}
+                    key={idx}
+                    className={`slider-dot ${activeProductIndex === idx ? 'slider-dot--active' : ''}`}
                     onClick={() => {
                       setSlideDirection(idx > activeProductIndex ? 1 : -1);
                       setActiveProductIndex(idx);
                     }}
-                  >
-                    <img 
-                      src={prod.img} 
-                      alt={prod.name} 
-                      className="product-showcase__gallery-img" 
-                    />
-                    <span className="product-showcase__gallery-name">{prod.name.replace('CCK ', '')}</span>
-                  </button>
+                    aria-label={`Go to slide ${idx + 1}`}
+                    style={{ backgroundColor: activeProductIndex === idx ? productsList[idx].colorCode : 'rgba(0, 0, 0, 0.15)' }}
+                  />
                 ))}
               </div>
-
-              {/* Slider Controls */}
-              <div className="product-slider-controls">
-                <button className="slider-arrow prev-arrow glass magnetic" onClick={handlePrev} aria-label="Previous product">
-                  <ArrowLeft size={18} />
-                </button>
-                <div className="slider-dots">
-                  {productsList.map((_, idx) => (
-                    <button
-                      key={idx}
-                      className={`slider-dot ${activeProductIndex === idx ? 'slider-dot--active' : ''}`}
-                      onClick={() => {
-                        setSlideDirection(idx > activeProductIndex ? 1 : -1);
-                        setActiveProductIndex(idx);
-                      }}
-                      aria-label={`Go to slide ${idx + 1}`}
-                      style={{ backgroundColor: activeProductIndex === idx ? productsList[idx].colorCode : 'rgba(0, 0, 0, 0.15)' }}
-                    />
-                  ))}
-                </div>
-                <button className="slider-arrow next-arrow glass magnetic" onClick={handleNext} aria-label="Next product">
-                  <ArrowRight size={18} />
-                </button>
-              </div>
-
+              <button className="slider-arrow next-arrow glass magnetic" onClick={handleNext} aria-label="Next product">
+                <ArrowRight size={18} />
+              </button>
             </div>
 
             {/* Spill Glass Hydro Physics Interactive Widget next to it! */}

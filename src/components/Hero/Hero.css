@@ -190,15 +190,12 @@
 }
 
 .hero__reimagined {
-  background: linear-gradient(135deg, #0f172a 10%, #64748b 60%, #cbd5e1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #000000;
 }
 
 .hero__subtitle {
   font-size: clamp(1rem, 1.5vw, 1.15rem);
-  color: var(--color-text-secondary);
+  color: #0f172a;
   max-width: 480px;
   line-height: 1.75;
   margin-bottom: 2.5rem;
@@ -332,7 +329,7 @@
 /* ── Water Flow ───────────────────────────────────────── */
 .hero__water-flow {
   position: absolute;
-  bottom: -80px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   pointer-events: none;
@@ -345,6 +342,7 @@
   margin: 0 auto;
   border-radius: var(--radius-full);
   animation: streamFlow 1.5s ease-in-out infinite;
+  display:none;
   box-shadow: 0 0 15px rgba(15, 23, 42, 0.3), 0 0 30px rgba(15, 23, 42, 0.15);
 }
 
@@ -355,7 +353,7 @@
 
 .hero__water-drops {
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -388,7 +386,7 @@
 /* Ripples */
 .hero__ripple-container {
   position: absolute;
-  bottom: -70px;
+  bottom: -55px;
   left: 50%;
   transform: translateX(-50%);
 }
