@@ -6,20 +6,20 @@
   --color-bg-glass: rgba(255, 255, 255, 0.72);
   --color-bg-glass-strong: rgba(255, 255, 255, 0.92);
 
-  /* Aqua / Cyan Glow Palette - adapted for light mode */
-  --color-aqua: #0b4c8c;
-  --color-aqua-dim: rgba(11, 76, 140, 0.08);
-  --color-aqua-glow: rgba(11, 76, 140, 0.22);
-  --color-cyan: #0b4c8c;
-  --color-cyan-dim: rgba(11, 76, 140, 0.06);
-  --color-accent: #0b4c8c;
-  --color-accent-bright: #1b5c9c;
+  /* Aqua / Cyan Glow Palette - adapted for light mode (now premium monochrome) */
+  --color-aqua: #090d16;
+  --color-aqua-dim: rgba(9, 13, 22, 0.08);
+  --color-aqua-glow: rgba(9, 13, 22, 0.15);
+  --color-cyan: #090d16;
+  --color-cyan-dim: rgba(9, 13, 22, 0.06);
+  --color-accent: #090d16;
+  --color-accent-bright: #2f3a4c;
 
   /* Text */
   --color-text-primary: #090d16;
   --color-text-secondary: #2f3a4c;
   --color-text-muted: #4e5f75;
-  --color-text-aqua: #0b4c8c;
+  --color-text-aqua: #090d16;
 
   /* Glass / Border */
   --color-glass-border: rgba(255, 255, 255, 0.3);
@@ -27,19 +27,19 @@
   --color-divider: rgba(9, 13, 22, 0.08);
 
   /* Gradients - Light Luxury */
-  --gradient-aqua: linear-gradient(135deg, #0b4c8c 0%, #0284c7 100%);
+  --gradient-aqua: linear-gradient(135deg, #090d16 0%, #5a6e85 100%);
   --gradient-dark: linear-gradient(135deg, #8da99a 0%, #7d998a 50%, #8da99a 100%);
   --gradient-card: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.72) 100%);
   --gradient-glow: radial-gradient(circle at center, rgba(255,255,255,0.2) 0%, transparent 70%);
   --gradient-hero: radial-gradient(circle at 75% 50%, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 40%, transparent 70%);
 
   /* Shadows - adapted for light theme */
-  --shadow-aqua-sm: 0 0 15px rgba(11, 76, 140, 0.1);
-  --shadow-aqua-md: 0 8px 30px rgba(11, 76, 140, 0.15);
-  --shadow-aqua-lg: 0 15px 45px rgba(11, 76, 140, 0.2);
+  --shadow-aqua-sm: 0 0 15px rgba(9, 13, 22, 0.08);
+  --shadow-aqua-md: 0 8px 30px rgba(9, 13, 22, 0.12);
+  --shadow-aqua-lg: 0 15px 45px rgba(9, 13, 22, 0.16);
   --shadow-card: 0 20px 40px rgba(9, 13, 22, 0.04), 0 0 0 1px rgba(255, 255, 255, 0.2);
   --shadow-glass: inset 0 1px 0 rgba(255,255,255,0.65), 0 12px 30px rgba(9, 13, 22, 0.04);
-  --shadow-button: 0 8px 24px rgba(11, 76, 140, 0.25), inset 0 1px 0 rgba(255,255,255,0.4);
+  --shadow-button: 0 8px 24px rgba(9, 13, 22, 0.2), inset 0 1px 0 rgba(255,255,255,0.4);
 
   /* Typography */
   --font-primary: 'Space Grotesk', 'Inter', -apple-system, sans-serif;

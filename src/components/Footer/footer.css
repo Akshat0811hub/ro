@@ -44,7 +44,7 @@
 .footer__orb--1 {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(14,165,233,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(9, 13, 22, 0.05) 0%, transparent 70%);
   bottom: -100px;
   left: -50px;
 }
@@ -52,7 +52,7 @@
 .footer__orb--2 {
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(6,182,212,0.04) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(9, 13, 22, 0.03) 0%, transparent 70%);
   top: 50px;
   right: -50px;
 }
@@ -85,11 +85,11 @@
 .footer__logo-icon {
   width: 36px;
   height: 36px;
-  filter: drop-shadow(0 0 8px rgba(14, 165, 233, 0.25));
+  filter: drop-shadow(0 0 8px rgba(9, 13, 22, 0.15));
 }
 
 .footer__logo-plus {
-  background: linear-gradient(135deg, #0284c7, #06b6d4);
+  background: linear-gradient(135deg, #090d16, #5a6e85);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -106,6 +106,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  margin-bottom:9px;
 }
 
 .footer__social {
@@ -130,7 +131,7 @@
   color: #fff;
   border-color: transparent;
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.25);
+  box-shadow: 0 8px 20px rgba(9, 13, 22, 0.15);
 }
 
 .footer__col {
@@ -171,9 +172,10 @@
 
 .footer__bottom {
   border-top: 1px solid var(--color-divider);
-  padding: 1.8rem 0;
+  padding: 1.5rem 0;
   position: relative;
   z-index: 3;
+  height: 10px;
   background: rgba(255, 255, 255, 0.5);
 }
 

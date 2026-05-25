@@ -20,14 +20,14 @@
 
 .door-left {
   left: 0;
-  border-right: 1.5px solid rgba(14, 165, 233, 0.3);
-  box-shadow: 10px 0 30px rgba(14, 165, 233, 0.05);
+  border-right: 1.5px solid rgba(9, 13, 22, 0.12);
+  box-shadow: 10px 0 30px rgba(9, 13, 22, 0.03);
 }
 
 .door-right {
   right: 0;
-  border-left: 1.5px solid rgba(14, 165, 233, 0.3);
-  box-shadow: -10px 0 30px rgba(14, 165, 233, 0.05);
+  border-left: 1.5px solid rgba(9, 13, 22, 0.12);
+  box-shadow: -10px 0 30px rgba(9, 13, 22, 0.03);
 }
 
 .door-glow {
@@ -35,7 +35,7 @@
   top: 0;
   bottom: 0;
   width: 100px;
-  background: radial-gradient(ellipse at center, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(9, 13, 22, 0.05) 0%, transparent 70%);
 }
 
 .door-left .door-glow {

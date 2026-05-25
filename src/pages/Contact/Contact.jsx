@@ -119,40 +119,40 @@ export default function Contact() {
                 <div className="map-canvas">
                   <svg className="vector-map-svg" viewBox="0 0 400 300" fill="none">
                     {/* Simplified India Map Grid / Stylized Mesh */}
-                    <path d="M120,40 L190,30 L220,90 L260,110 L280,180 L230,260 L180,280 L160,220 L100,160 L100,100 Z" fill="rgba(14, 165, 233, 0.02)" stroke="rgba(14, 165, 233, 0.08)" strokeWidth="1.5" strokeDasharray="3 3" />
+                    <path d="M120,40 L190,30 L220,90 L260,110 L280,180 L230,260 L180,280 L160,220 L100,160 L100,100 Z" fill="rgba(9, 13, 22, 0.02)" stroke="rgba(9, 13, 22, 0.08)" strokeWidth="1.5" strokeDasharray="3 3" />
                     
                     {/* Delhi NCR Radar Dot */}
                     <g className="radar-node">
-                      <circle cx="170" cy="90" r="12" className="radar-pulse" fill="rgba(14, 165, 233, 0.15)" />
-                      <circle cx="170" cy="90" r="4" fill="#0ea5e9" />
+                      <circle cx="170" cy="90" r="12" className="radar-pulse" fill="rgba(9, 13, 22, 0.12)" />
+                      <circle cx="170" cy="90" r="4" fill="#090d16" />
                       <text x="180" y="93" fill="var(--color-text-primary)" fontSize="10" fontWeight="600">Delhi NCR</text>
                     </g>
 
                     {/* Mumbai Radar Dot */}
                     <g className="radar-node">
-                      <circle cx="130" cy="180" r="12" className="radar-pulse" fill="rgba(14, 165, 233, 0.15)" />
-                      <circle cx="130" cy="180" r="4" fill="#0ea5e9" />
+                      <circle cx="130" cy="180" r="12" className="radar-pulse" fill="rgba(9, 13, 22, 0.12)" />
+                      <circle cx="130" cy="180" r="4" fill="#090d16" />
                       <text x="140" y="183" fill="var(--color-text-primary)" fontSize="10" fontWeight="600">Mumbai</text>
                     </g>
 
                     {/* Pune Radar Dot */}
                     <g className="radar-node">
-                      <circle cx="140" cy="200" r="12" className="radar-pulse" fill="rgba(14, 165, 233, 0.15)" />
-                      <circle cx="140" cy="200" r="4" fill="#0ea5e9" />
+                      <circle cx="140" cy="200" r="12" className="radar-pulse" fill="rgba(9, 13, 22, 0.12)" />
+                      <circle cx="140" cy="200" r="4" fill="#090d16" />
                       <text x="150" y="203" fill="var(--color-text-primary)" fontSize="10" fontWeight="600">Pune</text>
                     </g>
 
                     {/* Bangalore Radar Dot */}
                     <g className="radar-node">
-                      <circle cx="170" cy="240" r="12" className="radar-pulse" fill="rgba(14, 165, 233, 0.15)" />
-                      <circle cx="170" cy="240" r="4" fill="#0ea5e9" />
+                      <circle cx="170" cy="240" r="12" className="radar-pulse" fill="rgba(9, 13, 22, 0.12)" />
+                      <circle cx="170" cy="240" r="4" fill="#090d16" />
                       <text x="180" y="243" fill="var(--color-text-primary)" fontSize="10" fontWeight="600">Bangalore</text>
                     </g>
 
                     {/* Hyderabad Radar Dot */}
                     <g className="radar-node">
-                      <circle cx="180" cy="210" r="12" className="radar-pulse" fill="rgba(14, 165, 233, 0.15)" />
-                      <circle cx="180" cy="210" r="4" fill="#0ea5e9" />
+                      <circle cx="180" cy="210" r="12" className="radar-pulse" fill="rgba(9, 13, 22, 0.12)" />
+                      <circle cx="180" cy="210" r="4" fill="#090d16" />
                       <text x="190" y="213" fill="var(--color-text-primary)" fontSize="10" fontWeight="600">Hyderabad</text>
                     </g>
                   </svg>

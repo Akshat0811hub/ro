@@ -83,7 +83,7 @@ export default function Hero() {
             transition={{ duration: 0.9, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
           >
             Water, <br />
-            <span className="gradient-text">Reimagined.</span>
+            <span className="hero__reimagined">Reimagined.</span>
           </motion.h1>
 
           <motion.p
@@ -150,7 +150,7 @@ export default function Hero() {
             transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           >
             <img
-              src="/assets/ro3.png"
+              src="/assets/ro4.png"
               alt="CCK RO Water Purifier"
               className="hero__purifier-img"
               loading="eager"

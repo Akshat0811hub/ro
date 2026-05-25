@@ -343,7 +343,7 @@ export default function Features() {
             whileHover={{ scale: 1.01, border: '1px solid var(--color-aqua)', transition: { duration: 0.2 } }}
           >
             <div style={{ position: 'relative', zIndex: 3 }}>
-              <div style={{ fontSize: '3.2rem', marginBottom: '1rem', filter: 'drop-shadow(0 0 15px rgba(14, 165, 233, 0.4))' }}>🔍</div>
+              <div style={{ fontSize: '3.2rem', marginBottom: '1rem', filter: 'drop-shadow(0 0 15px rgba(15, 23, 42, 0.4))' }}>🔍</div>
               <h4 style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '0.6rem', color: '#ffffff', fontFamily: 'Outfit, sans-serif', letterSpacing: '-0.01em' }}>Explore 7-Stage Molecular Filtration Blueprint</h4>
               <p style={{ fontSize: '0.92rem', color: '#cbd5e1', maxWidth: '520px', margin: '0 auto 1.5rem auto', lineHeight: '1.6', fontWeight: '500' }}>
                 View the high-resolution engineering blueprint of internal filtration cartridge loops, active copper lines, and fluid mechanics.

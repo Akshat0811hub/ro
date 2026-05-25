@@ -36,7 +36,7 @@ export default function Footer() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="footer__logo">
-            <img src="/assets/logo.png" alt="CCK Logo" className="footer__logo-image" style={{ height: '54px', width: 'auto', objectFit: 'contain', display: 'block', mixBlendMode: 'multiply' }} />
+            <img src="/assets/blacklogo.png" alt="CCK Logo" className="footer__logo-image" style={{ height: '54px', width: 'auto', objectFit: 'contain', display: 'block' }} />
           </div>
           <p className="footer__tagline">
             Engineering water perfection since 2010. 

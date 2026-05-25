@@ -47,13 +47,13 @@ export default function Products() {
     },
     { 
       id: 'ro3', 
-      name: "CCK Sapphire Blue", 
+      name: "CCK Obsidian Black", 
       price: "$479", 
       tag: "Best Seller", 
       category: 'classic',
-      desc: "Deep royal sapphire casing featuring double copper-zinc bio-mineralization. Perfect for standard family sizes.", 
+      desc: "Deep obsidian black casing featuring double copper-zinc bio-mineralization. Perfect for standard family sizes.", 
       img: "/assets/ro3.png",
-      colorCode: "#0b4c8c",
+      colorCode: "#121212",
       specs: {
         filtration: "7-Stage RO + UV + UF",
         flowRate: "12 Litres / Hour",

@@ -26,7 +26,7 @@
 .hero__orb--1 {
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(14,165,233,0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(9, 13, 22, 0.05) 0%, transparent 70%);
   top: -150px;
   right: -100px;
   animation: heroOrb1 10s ease-in-out infinite;
@@ -35,7 +35,7 @@
 .hero__orb--2 {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(6,182,212,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(9, 13, 22, 0.04) 0%, transparent 70%);
   bottom: -100px;
   left: 10%;
   animation: heroOrb2 13s ease-in-out infinite;
@@ -44,7 +44,7 @@
 .hero__orb--3 {
   width: 350px;
   height: 350px;
-  background: radial-gradient(circle, rgba(3,105,161,0.04) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(9, 13, 22, 0.03) 0%, transparent 70%);
   top: 30%;
   left: 50%;
   animation: heroOrb3 8s ease-in-out infinite;
@@ -67,8 +67,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(14,165,233,0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(14,165,233,0.02) 1px, transparent 1px);
+    linear-gradient(rgba(9, 13, 22, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(9, 13, 22, 0.015) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: radial-gradient(ellipse at 60% 50%, black 0%, transparent 70%);
 }
@@ -101,16 +101,16 @@
 }
 
 .hero__wave--1 {
-  background: linear-gradient(transparent, rgba(14,165,233,0.05));
+  background: linear-gradient(transparent, rgba(9, 13, 22, 0.04));
   animation: waveFlow 8s ease-in-out infinite;
 }
 .hero__wave--2 {
-  background: linear-gradient(transparent, rgba(6,182,212,0.04));
+  background: linear-gradient(transparent, rgba(9, 13, 22, 0.03));
   animation: waveFlow 11s ease-in-out infinite reverse;
   bottom: 10px;
 }
 .hero__wave--3 {
-  background: linear-gradient(transparent, rgba(3,105,161,0.03));
+  background: linear-gradient(transparent, rgba(9, 13, 22, 0.02));
   animation: waveFlow 14s ease-in-out infinite;
   bottom: 20px;
 }
@@ -131,7 +131,7 @@
 .hero__streak {
   position: absolute;
   width: 1.5px;
-  background: linear-gradient(180deg, transparent, rgba(14,165,233,0.4), transparent);
+  background: linear-gradient(180deg, transparent, rgba(9, 13, 22, 0.25), transparent);
   border-radius: 2px;
   filter: blur(0.5px);
   animation: streakMove 4s ease-in-out infinite;
@@ -189,6 +189,13 @@
   margin-bottom: 1.5rem;
 }
 
+.hero__reimagined {
+  background: linear-gradient(135deg, #0f172a 10%, #64748b 60%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .hero__subtitle {
   font-size: clamp(1rem, 1.5vw, 1.15rem);
   color: var(--color-text-secondary);
@@ -228,7 +235,7 @@
   font-weight: 800;
   color: #0f172a;
   line-height: 1;
-  background: linear-gradient(135deg, #0f172a 50%, #0ea5e9);
+  background: linear-gradient(135deg, #0f172a 50%, #64748b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -244,7 +251,7 @@
 
 .hero__stat + .hero__stat {
   padding-left: 2.5rem;
-  border-left: 1px solid rgba(14,165,233,0.12);
+  border-left: 1px solid rgba(9, 13, 22, 0.08);
 }
 
 /* ── Right Visual ─────────────────────────────────────── */
@@ -260,22 +267,22 @@
 .hero__glow-ring {
   position: absolute;
   border-radius: 50%;
-  border: 1px solid rgba(14,165,233,0.15);
+  border: 1px solid rgba(9, 13, 22, 0.08);
   pointer-events: none;
 }
 
 .hero__glow-ring--outer {
   width: 520px;
   height: 520px;
-  border-color: rgba(14,165,233,0.08);
+  border-color: rgba(9, 13, 22, 0.04);
   animation: ringRotateSlow 20s linear infinite;
-  background: radial-gradient(circle, rgba(14,165,233,0.02) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(9, 13, 22, 0.015) 0%, transparent 70%);
 }
 
 .hero__glow-ring--inner {
   width: 380px;
   height: 380px;
-  border-color: rgba(14,165,233,0.15);
+  border-color: rgba(9, 13, 22, 0.08);
   animation: ringRotateSlow 14s linear infinite reverse;
   border-style: dashed;
 }
@@ -290,7 +297,7 @@
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(14,165,233,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(9, 13, 22, 0.03) 0%, transparent 70%);
   animation: glowPulse 3s ease-in-out infinite;
   pointer-events: none;
 }
@@ -315,10 +322,10 @@
 }
 
 .hero__purifier-img {
-  width: 320px;
-  height: auto;
+  width: auto;
+  height: 340px;
   object-fit: contain;
-  filter: drop-shadow(0 20px 60px rgba(14,165,233,0.22)) drop-shadow(0 0 30px rgba(6,182,212,0.12));
+  filter: drop-shadow(0 20px 60px rgba(9, 13, 22, 0.15)) drop-shadow(0 0 30px rgba(9, 13, 22, 0.06));
   border-radius: 16px;
 }
 
@@ -332,18 +339,18 @@
 }
 
 .hero__water-stream {
-  width: 3px;
-  height: 60px;
-  background: linear-gradient(180deg, rgba(14,165,233,0.8), rgba(14,165,233,0.15));
+  width: 14px;
+  height: 80px;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.2));
   margin: 0 auto;
-  border-radius: 2px;
+  border-radius: var(--radius-full);
   animation: streamFlow 1.5s ease-in-out infinite;
-  box-shadow: 0 0 8px rgba(14,165,233,0.5);
+  box-shadow: 0 0 15px rgba(15, 23, 42, 0.3), 0 0 30px rgba(15, 23, 42, 0.15);
 }
 
 @keyframes streamFlow {
   0%,100% { scaleY: 1; opacity: 0.8; }
-  50% { scaleY: 1.1; opacity: 1; }
+  50% { scaleY: 1.15; opacity: 1; }
 }
 
 .hero__water-drops {
@@ -355,11 +362,11 @@
 
 .hero__drop {
   position: absolute;
-  width: 4px;
-  height: 4px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: rgba(14,165,233,0.8);
-  box-shadow: 0 0 6px rgba(14,165,233,0.7);
+  background: rgba(15, 23, 42, 0.9);
+  box-shadow: 0 0 10px rgba(15, 23, 42, 0.4);
   left: 50%;
   transform: translateX(-50%);
   animation: dropFall 2s ease-in infinite;
@@ -368,14 +375,14 @@
 .hero__drop--1 { animation-delay: 0s; }
 .hero__drop--2 { animation-delay: 0.33s; }
 .hero__drop--3 { animation-delay: 0.66s; }
-.hero__drop--4 { animation-delay: 0.99s; width: 3px; height: 3px; left: 45%; }
-.hero__drop--5 { animation-delay: 1.2s; width: 3px; height: 3px; left: 55%; }
+.hero__drop--4 { animation-delay: 0.99s; width: 6px; height: 6px; left: 40%; }
+.hero__drop--5 { animation-delay: 1.2s; width: 6px; height: 6px; left: 60%; }
 .hero__drop--6 { animation-delay: 1.5s; }
 
 @keyframes dropFall {
   0% { opacity: 0; transform: translateX(-50%) translateY(0) scale(0.5); }
   20% { opacity: 1; }
-  100% { opacity: 0; transform: translateX(-50%) translateY(50px) scale(1.2); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(65px) scale(1.2); }
 }
 
 /* Ripples */
@@ -391,7 +398,7 @@
   top: 0; left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: 1.5px solid rgba(14,165,233,0.3);
+  border: 1.5px solid rgba(15, 23, 42, 0.2);
   animation: rippleExpand 2.5s ease-out infinite;
 }
 
@@ -400,8 +407,8 @@
 .hero__ripple--3 { width: 20px; height: 8px; animation-delay: 1.2s; }
 
 @keyframes rippleExpand {
-  0% { width: 10px; height: 4px; opacity: 0.8; border-color: rgba(14,165,233,0.5); }
-  100% { width: 80px; height: 24px; opacity: 0; border-color: rgba(14,165,233,0); }
+  0% { width: 10px; height: 4px; opacity: 0.8; border-color: rgba(15, 23, 42, 0.4); }
+  100% { width: 80px; height: 24px; opacity: 0; border-color: rgba(15, 23, 42, 0); }
 }
 
 /* ── Spec Cards ───────────────────────────────────────── */
@@ -415,7 +422,7 @@
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(14,165,233,0.16);
+  border: 1px solid rgba(9, 13, 22, 0.12);
   box-shadow: 0 10px 30px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.7);
   z-index: 5;
   animation: specFloat 4s ease-in-out infinite;
@@ -426,7 +433,7 @@
 
 .hero__spec-card:hover {
   transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.06), 0 0 20px rgba(14,165,233,0.15);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.06), 0 0 20px rgba(9, 13, 22, 0.08);
 }
 
 .hero__spec-card--1 { top: 12%; left: -5%; animation-delay: 0s; }
@@ -486,7 +493,7 @@
 .hero__scroll-line {
   width: 1px;
   height: 48px;
-  background: linear-gradient(180deg, transparent, rgba(14,165,233,0.4));
+  background: linear-gradient(180deg, transparent, rgba(9, 13, 22, 0.25));
   animation: scrollLinePulse 2s ease-in-out infinite;
 }
 
@@ -500,7 +507,7 @@
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(14,165,233,0.5);
+  color: rgba(9, 13, 22, 0.4);
 }
 
 /* ── Bottom Wave ─────────────────────────────────────── */

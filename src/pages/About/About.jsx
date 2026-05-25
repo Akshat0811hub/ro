@@ -145,7 +145,7 @@ export default function About() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 border: '1px solid var(--color-glass-border)',
-                background: 'linear-gradient(135deg, rgba(159, 188, 171, 0.03) 0%, rgba(11, 76, 140, 0.03) 100%)',
+                background: 'linear-gradient(135deg, rgba(159, 188, 171, 0.03) 0%, rgba(9, 13, 22, 0.03) 100%)',
                 position: 'relative',
                 overflow: 'hidden'
               }}
@@ -176,7 +176,7 @@ export default function About() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 border: '1px solid var(--color-glass-border)',
-                background: 'linear-gradient(135deg, rgba(11, 76, 140, 0.03) 0%, rgba(159, 188, 171, 0.03) 100%)',
+                background: 'linear-gradient(135deg, rgba(9, 13, 22, 0.03) 0%, rgba(159, 188, 171, 0.03) 100%)',
                 position: 'relative',
                 overflow: 'hidden'
               }}
