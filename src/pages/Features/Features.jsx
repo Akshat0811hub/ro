@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, ChevronUp, Layers, Sparkles, Droplet, Smartphone, ShieldCheck, HelpCircle, Activity, Shield, Award, Cpu } from 'lucide-react';
+import { ChevronDown, ChevronUp, Layers, Sparkles, Droplet, Smartphone, ShieldCheck, HelpCircle, Cpu } from 'lucide-react';
 import './features.css';
 
 export default function Features() {

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { motion, AnimatePresence,  } from 'framer-motion';
 import { 
   Sparkles, 
   Shield, 
@@ -8,9 +8,7 @@ import {
   Award, 
   ChevronDown, 
   ChevronUp, 
-  Info,
   Layers,
-  Settings,
   Check,
   Send,
   Zap,

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Heart, Compass, Shield, Award, Sparkles, Cpu, Target } from 'lucide-react';
+import { Heart, Compass, Shield, Award, Sparkles, Cpu } from 'lucide-react';
 import './about.css';
 
 export default function About() {

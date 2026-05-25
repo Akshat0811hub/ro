@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, Send, ShieldCheck, HelpCircle, Calendar, Cpu, User } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, ShieldCheck } from 'lucide-react';
 import './contact.css';
 
 export default function Contact() {
