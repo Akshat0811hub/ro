@@ -308,18 +308,20 @@ export default function Home() {
             {/* Lifestyle Image Placeholder Panel */}
             <motion.div
               className="why-us__image-placeholder glass"
+              style={{
+                background: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.45)), url('/assets/lifestyle.png') no-repeat center center / cover",
+                border: "1px solid rgba(255, 255, 255, 0.25)"
+              }}
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div style={{ fontSize: '3rem', marginBottom: '1.5rem', filter: 'grayscale(0.3)' }}>🏡</div>
-              <h4 style={{ fontSize: '1.25rem', fontWeight: '700', marginBottom: '0.6rem', color: 'var(--color-text-primary)' }}>Luxury Kitchen Integration</h4>
-              <p style={{ fontSize: '0.88rem', color: 'var(--color-text-secondary)', maxWidth: '260px', lineHeight: '1.6' }}>
-                [Premium Lifestyle Assembly Image Space]<br/>
-                Replace this placeholder with a photo of your G+ installation in a designer master-kitchen space.
+              <h4 style={{ fontSize: '1.5rem', fontWeight: '800', marginBottom: '0.8rem', color: '#ffffff', textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>Purity in Every Drop</h4>
+              <p style={{ fontSize: '0.95rem', color: '#f1f5f9', maxWidth: '280px', lineHeight: '1.6', textShadow: '0 2px 6px rgba(0,0,0,0.6)', fontWeight: '500' }}>
+                Experience the crisp, glacier-like hydration. CCK transforms water purification into a daily luxury for your family.
               </p>
-              <div className="why-us__image-placeholder-inner" />
+              <div className="why-us__image-placeholder-inner" style={{ borderColor: 'rgba(255, 255, 255, 0.3)' }} />
             </motion.div>
           </div>
         </div>
